@@ -227,99 +227,114 @@ static char kActionHandlerLongPressGestureKey;
 
 #pragma mark - 代码简写
 @implementation UIView (XFrame)
-- (CGFloat)left {
+- (CGFloat)x_left {
     return self.frame.origin.x;
 }
 
-- (void)setLeft:(CGFloat)x {
+
+-(void)setX_left:(CGFloat)x_left
+{
     CGRect frame = self.frame;
-    frame.origin.x = x;
+    frame.origin.x = x_left;
     self.frame = frame;
 }
 
-- (CGFloat)top {
+- (CGFloat)x_top {
     return self.frame.origin.y;
 }
 
-- (void)setTop:(CGFloat)y {
+-(void)setX_top:(CGFloat)x_top
+{
     CGRect frame = self.frame;
-    frame.origin.y = y;
+    frame.origin.y = x_top;
     self.frame = frame;
 }
 
-- (CGFloat)right {
+- (CGFloat)x_right {
     return self.frame.origin.x + self.frame.size.width;
 }
 
-- (void)setRight:(CGFloat)right {
+-(void)setX_right:(CGFloat)x_right
+{
     CGRect frame = self.frame;
-    frame.origin.x = right - frame.size.width;
+    frame.origin.x = x_right - frame.size.width;
     self.frame = frame;
 }
 
-- (CGFloat)bottom {
+
+- (CGFloat)x_bottom {
     return self.frame.origin.y + self.frame.size.height;
 }
 
-- (void)setBottom:(CGFloat)bottom {
+-(void)setX_bottom:(CGFloat)x_bottom
+{
     CGRect frame = self.frame;
-    frame.origin.y = bottom - frame.size.height;
+    frame.origin.y = x_bottom - frame.size.height;
     self.frame = frame;
 }
 
-- (CGFloat)width {
+
+- (CGFloat)x_width {
     return self.frame.size.width;
 }
 
-- (void)setWidth:(CGFloat)width {
+-(void)setX_width:(CGFloat)x_width
+{
     CGRect frame = self.frame;
-    frame.size.width = width;
+    frame.size.width = x_width;
     self.frame = frame;
 }
 
-- (CGFloat)height {
+- (CGFloat)x_height {
     return self.frame.size.height;
 }
 
-- (void)setHeight:(CGFloat)height {
+-(void)setX_height:(CGFloat)x_height
+{
     CGRect frame = self.frame;
-    frame.size.height = height;
+    frame.size.height = x_height;
     self.frame = frame;
 }
 
-- (CGFloat)centerX {
+
+- (CGFloat)x_centerX {
     return self.center.x;
 }
 
-- (void)setCenterX:(CGFloat)centerX {
-    self.center = CGPointMake(centerX, self.center.y);
+-(void)setX_centerX:(CGFloat)x_centerX
+{
+    self.center = CGPointMake(x_centerX, self.center.y);
 }
 
-- (CGFloat)centerY {
+
+- (CGFloat)x_centerY {
     return self.center.y;
 }
 
-- (void)setCenterY:(CGFloat)centerY {
-    self.center = CGPointMake(self.center.x, centerY);
+-(void)setX_centerY:(CGFloat)x_centerY
+{
+    self.center = CGPointMake(self.center.x, x_centerY);
 }
 
-- (CGPoint)origin {
+- (CGPoint)x_origin {
     return self.frame.origin;
 }
 
-- (void)setOrigin:(CGPoint)origin {
+-(void)setX_origin:(CGPoint)x_origin
+{
     CGRect frame = self.frame;
-    frame.origin = origin;
+    frame.origin = x_origin;
     self.frame = frame;
 }
 
-- (CGSize)size {
+- (CGSize)x_size {
     return self.frame.size;
 }
 
-- (void)setSize:(CGSize)size {
+-(void)setX_size:(CGSize)x_size
+{
     CGRect frame = self.frame;
-    frame.size = size;
+    frame.size = x_size;
     self.frame = frame;
 }
 
